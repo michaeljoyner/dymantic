@@ -1,0 +1,69 @@
+#contactform {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+#contactform .row {
+  margin-top: 0.7em;
+}
+
+#contactform label {
+  font-family: $opensans;
+  font-weight: 300;
+  font-size: 1em;
+  color: $primary_blue;
+  margin: 0.5em 0 1em 0;
+}
+
+#contactform .input-group-addon {
+  background-color: $white;
+  border-radius: 0;
+  border: 1px solid $primary_blue;
+  border-right: none;
+}
+
+#contactform .input-group-addon span {
+  color: $primary_blue;
+}
+
+#contactform input, #contactform textarea {
+  border-radius: 0;
+  border: 1px solid $primary_blue;
+  font-family: $opensans;
+}
+
+#submitbutton {
+  background-color: $primary_orange;
+  border-color: $primary_orange;
+  margin: 2em 0;
+}
+
+.brief_subheader {
+  text-align: center;
+  font-weight: 400;
+}
+
+.contact-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 0.75em;
+  color: $primary_blue;
+  background-color: $white;
+  position: relative;
+}
+
+.contact-icon>span {
+  position: relative;
+  top: -5%;
+  left: 0%;
+  font-size: 80%;
+  vertical-align: middle;
+}
+
+.contactdetail {
+  font-size: 1em;
+  font-weight: 300;
+  @include respond-to(phone) {font-size: 95%;}
+}

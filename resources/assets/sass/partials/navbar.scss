@@ -1,0 +1,54 @@
+/*navbar main*/
+.nav-menu-list {
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 500;
+  list-style-type: none;
+  width: 100%;
+  font-family: $opensans;
+  padding: 0;
+  margin: 0 0 3em 0;
+  color: $darkgrey;
+}
+
+.nav-menu-list li {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 0;
+  margin: 0 3%;
+}
+
+.nav-menu-list li.inactive {
+  color: $darkishgrey;
+  cursor: default;
+  @include respond-to(phone) { display: none;}
+}
+
+.nav-menu-list li.inactive:not(.inactive-home):before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2em;
+  left: 0;
+  top: -1.2em;
+  background: url( '../../images/navbubbles.svg');
+  background-position: 0 0;
+  background-size: 100% 2em;
+}
+
+.nav-menu-list li.active:after {
+  content: '';
+  width: 5px;
+  height: 3px;
+  transition: width 1s;
+  position: absolute;
+  left: 0;
+  bottom: 0.5em;
+  background-color: $white;
+}
+
+.nav-menu-list li.active:hover:after {
+  width: 100%;
+  background-color: $primary_orange;
+}

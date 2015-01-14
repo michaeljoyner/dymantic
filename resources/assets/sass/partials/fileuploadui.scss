@@ -1,0 +1,84 @@
+.fum_file-upload-box {
+  position: relative;
+  display: inline-block;
+  margin: 0.5em 2em 0.5em 0;
+}
+
+.fum_file-upload-box .fum_imagebox, .fum_file-upload-box .fum_infobox {
+  display: inline-block;
+}
+
+.fum_infobox {
+  padding: 1em;
+}
+
+.fum_infobox p {
+  margin: 0.5em 0;
+}
+
+.fum_filename {
+  color: #808184;
+  font-size: 90%;
+}
+
+.fum_file-upload-box .fum_imagebox {
+  width: 100px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.fum_file-upload-box .fum_imagebox img {
+  width: 100%;
+  height: 100%;
+}
+
+.fum_file-upload-box .fum_infobox {
+  vertical-align: top;
+}
+
+.fum_progressbar_outer {
+  position: relative;
+  width: 200px;
+  height: 16px;
+  margin: 0.5em 0;
+  border: 1px solid $primary_blue;
+  border-radius: 5px;
+}
+
+.fum_progressbar_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: repeating-linear-gradient(
+                  45deg,
+                  $primary_blue,
+                  $primary_blue 10px,
+                  $primary_orange 10px,
+                  $primary_orange 20px
+  );
+}
+
+.fum_error-box {
+  width: 90%;
+  margin: 0.5em auto;
+  border: 1px solid $error_alert;
+  border-radius: 8px;
+  position: relative;
+  padding: 5px;
+}
+
+.fum_error-box p, .fum_error-box span {
+  color: $error_alert;
+}
+
+.fum_error-box p {
+  width: 85%;
+  display: inline-block;
+}
+
+.fum_error-box span {
+  float: right;
+  font-size: 1.25em;
+}

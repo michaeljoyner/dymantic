@@ -1,0 +1,7 @@
+/vendor
+.env
+/public/useruploads/logoimages/*
+/public/useruploads/printdocs/*
+/public/useruploads/printimages/*
+/public/useruploads/quotefiles/*
+/node_modules

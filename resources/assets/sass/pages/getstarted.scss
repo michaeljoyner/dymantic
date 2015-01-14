@@ -1,0 +1,173 @@
+#general_brief {
+  display: none;
+}
+
+#logo_brief {
+  display: none;
+}
+
+#website_brief {
+  display: none;
+}
+
+.select-service-section {
+  text-align: center;
+  @include respond-to(phone) {padding: 3em 0;}
+}
+
+
+.service-select {
+  width: 12%;
+  margin: 0 5%;
+  display: inline-block;
+  @include respond-to(phone) {width: 30%; margin: 0;}
+}
+
+.service-select.unchosen svg .svgblue {
+  fill: $lightgrey;
+}
+
+.service-select .ss-icon-holder svg {
+  width: 80%;
+  height: 80%;
+}
+
+.ss-icon-holder {
+  margin-bottom: 1em;
+}
+
+.ss-icon-holder img {
+  width: 100%;
+}
+
+.ss-checkbox-holder {
+  text-align: center;
+}
+
+.service-select .ss-checkbox {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid $midlightgrey;
+  border-radius: 4px;
+}
+
+.ss-checkbox img {
+  width: 100%;
+  height: 100%;
+  vertical-align: baseline;
+}
+
+.service-select.unchosen .ss-checkbox img {
+  display: none;
+}
+
+.ss-label {
+  vertical-align: 20%;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.service-select .ss-label {
+  margin-bottom: 0.5em;
+}
+
+#brief_type_select {
+  display: none;
+}
+
+#logobriefform {
+  padding: 0 1em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#logobriefform .row>label {
+  margin-left: 15px;
+}
+
+
+#logobriefform label {
+  font-family: $opensans;
+  font-weight: 300;
+  font-size: 1em;
+  color: $primary_blue;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+#logobriefform input, #logobriefform textarea {
+  border-radius: 0;
+  border: 1px solid $primary_blue;
+  font-family: $opensans;
+}
+
+#logobriefform ul {
+  list-style-type: none;
+}
+
+#logobriefform .radiorow_outer {
+}
+
+#logobriefform .radiorow_inner {
+  margin-left: 0;
+}
+
+#logobriefform .radiorow_inner label {
+  color: $darkgrey;
+  margin: 0;
+}
+
+#logobriefform #logoselect_label {
+  margin-left: 0;
+}
+
+.brief_header {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.brief_subheader {
+  text-align: center;
+  font-weight: 400;
+}
+
+.brief_note {
+  text-align: center;
+  font-size: 90%;
+}
+
+#submitbutton {
+  background-color: $primary_orange;
+  border-color: $primary_orange;
+  margin: 3em 0;
+}
+
+.file-select-area input[type=file] {
+  display: none;
+}
+
+.file-select-area {
+  padding: 2em 1em;
+}
+
+.lt-ie9 .file-select-area input[type=file], .lt-ie10 .file-select-area input[type=file] {
+  display: inline-block;
+}
+
+.file-select-area .browse_btn {
+  display: inline-block;
+  height: 1.5em;
+  line-height: 1.35em;
+  border-radius: 1em;
+  font-size: 80%;
+  border: 1px solid $primary_orange;
+  background-color: $white;
+  color: $primary_orange;
+  font-weight: 400;
+  padding: 0 2em;
+  vertical-align: bottom;
+  margin-left: 2em;
+}
+

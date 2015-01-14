@@ -1,0 +1,67 @@
+.wavy {
+  background-color: #6FCCE2;
+  position: relative;
+  margin-top: 3em;
+}
+
+.wavy:before {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  content: '';
+  background-image: url('../../images/wave_pattern_2.png');
+  background-repeat: repeat-x;
+}
+
+.body-section {
+  padding: 3em 2em;
+  margin-top: 2em;
+}
+
+.blue {
+  color: $primary_blue;
+}
+
+.orange {
+  color: $primary_orange;
+}
+
+.white {
+  color: $white;
+}
+
+.darkgrey {
+  color: $darkgrey;
+}
+
+.geosans {
+  font-family: $geosans;
+}
+
+.opensans {
+  font-family: $opensans;
+}
+
+.big {
+  font-size: 150%;
+}
+
+.body-section p {
+  max-width: 800px;
+  margin: 0 auto 1em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.wavy p {
+  color: $white;
+}
+
+.body-section h1 {
+  text-align: center;
+  font-family: $geosans;
+  font-weight: 600;
+  font-size: 3em;
+}

@@ -1,0 +1,75 @@
+#proposal_form {
+  padding: 0 1em;
+  max-width: 1100px;
+}
+
+#proposal_form .row {
+  margin-top: 0.7em;
+}
+
+#proposal_form label {
+  font-family: $opensans;
+  font-weight: 300;
+  font-size: 1em;
+  color: #6FCCE2;
+  margin: 0.5em 0 1em 0;
+}
+
+#proposal_form .input-group-addon {
+  background-color: $white;
+  border-radius: 0;
+  border: 1px solid $primary_blue;
+  border-right: none;
+}
+
+#proposal_form .input-group-addon span {
+  color: $primary_blue;
+}
+
+#proposal_form input, #proposal_form textarea, #proposal_form select {
+  border-radius: 0;
+  border: 1px solid $primary_blue;
+  font-family: $opensans;
+}
+
+#proposal_form select {
+  color: $lightdarkgrey;
+}
+
+.brief_subheader {
+  text-align: center;
+  font-weight: 400;
+}
+
+.file-select-area input[type=file] {
+  display: none;
+}
+
+.file-select-area {
+  padding: 2em 1em;
+}
+
+.lt-ie9 .file-select-area input[type=file], .lt-ie10 .file-select-area input[type=file] {
+  display: inline-block;
+}
+
+.file-select-area .browse_btn {
+  display: inline-block;
+  height: 1.5em;
+  line-height: 1.35em;
+  border-radius: 1em;
+  font-size: 80%;
+  border: 1px solid $primary_orange;
+  background-color: $white;
+  color: $primary_orange;
+  font-weight: 400;
+  padding: 0 2em;
+  vertical-align: bottom;
+  margin-left: 2em;
+}
+
+#submitbutton {
+  background-color: $primary_orange;
+  border-color: $primary_orange;
+  margin-bottom: 2em;
+}

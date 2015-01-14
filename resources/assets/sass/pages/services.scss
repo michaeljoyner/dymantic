@@ -1,0 +1,95 @@
+#services_header {
+  position: relative;
+}
+
+#services_header h1 {
+  font-size: 4em;
+}
+
+.service-section {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.service-icon-container {
+  display: inline-block;
+  width: 40%;
+  clear: both;
+  @include respond-to(phone) {display: block; width: 100%; margin: 0 auto};
+
+  svg {
+    @include respond-to(phone) {max-height: 160px;}
+  }
+}
+
+.service-writeup {
+  display: inline-block;
+  width: 58%;
+  vertical-align: top;
+  margin-top: 1em;
+  @include respond-to(phone) {display: block; width: 100%; margin: 0 auto};
+}
+
+#service-logo-text {
+  margin-bottom: 5em;
+}
+
+#service-logo-box {
+  float: right;
+}
+
+
+
+.icon-box svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-box {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.icon-box img {
+  width: 90%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.icon-box p {
+  font-family: $opensans;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#get_started_btn {
+  width: 18em;
+  margin: 4em auto;
+  height: 2.5em;
+  border-radius: 1.25em;
+  border: 2px solid $primary_orange;
+  background-color: $white;
+}
+
+#get_started_btn p {
+  text-align: center;
+  color: $primary_orange;
+  line-height: 1.5em;
+}
+
+#newship {
+  display: block;
+  position: absolute;
+  bottom: -2.5em;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#newshipsvg {
+  @include respond-to(phone) {position: relative; left: -1400px;}
+  @include respond-to(smalltablet) {position: relative; left: -1000px;}
+  @include respond-to(largetablet) {position: relative; left: -500px;}
+}

@@ -1,0 +1,42 @@
+.footer {
+  background: url('../../images/footpattern2.png') repeat;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.footer_wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footlist {
+  width: 100%;
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 1.5em 0;
+  margin-top: 3.75em;
+  @include respond-to(phone) {text-align: left;}
+
+}
+
+.footlist li {
+  display: inline-block;
+  margin: 0 7%;
+  @include respond-to(phone) {margin: 0 12%;}
+}
+
+#legal {
+  font-size: 80%;
+  color: $darkgrey;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
+.body-section h1.page_header {
+  font-size: 3.75em;
+  font-weight: 500;
+  margin-top: 0;
+}

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="1000px" height="200px" viewBox="0 0 1000 200" preserveAspectRatio="xMaxYMid meet" id="mysvg">
+    	<circle cx="450" cy="180" r="15" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="0s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="350" cy="180" r="10" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="2s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="750" cy="180" r="8" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="4s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="550" cy="180" r="15" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="5s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="650" cy="180" r="5" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="0s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="100" cy="180" r="15" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="0s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="150" cy="180" r="10" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="2s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="250" cy="180" r="8" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="4s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="350" cy="180" r="15" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="5s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="950" cy="180" r="5" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="0s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="880" cy="180" r="15" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="0s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="200" cy="180" r="10" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="3s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="950" cy="180" r="8" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="7s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="500" cy="180" r="15" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q50,-50 0,-67, q-50,-50 0,-100"
+    			begin="3s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+    	<circle cx="50" cy="180" r="5" style="stroke: none; fill: #BDEEFF;">
+    		<animateMotion
+    			path="M0,0 q-50,-50 0,-67, q50,-50 0,-100"
+    			begin="1s" dur="10s" repeatCount="indefinite"
+    			/>
+    	</circle>
+	</svg>

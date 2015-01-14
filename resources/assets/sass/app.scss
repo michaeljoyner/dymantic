@@ -1,0 +1,15 @@
+@import "variables/colors";
+@import "variables/typography";
+@import "mixins/media";
+
+@import "partials/base";
+@import "partials/layout";
+@import "partials/navbar";
+@import "partials/footer";
+@import "partials/fileuploadui";
+
+@import "pages/home";
+@import "pages/services";
+@import "pages/getstarted";
+@import "pages/quote";
+@import "pages/contact";
