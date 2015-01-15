@@ -8,7 +8,7 @@
 		"laravel/framework": "~5.0",
 		"illuminate/html": "5.0.*@dev",
 		"guzzlehttp/guzzle": "~5.0@dev",
-		"pda/pheanstalk": "~2.0",
+		"pda/pheanstalk": "~3.0",
 		"adamgoose/laravel-annotations": "~5.0"
 	},
 	"require-dev": {
