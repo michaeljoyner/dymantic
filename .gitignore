@@ -5,3 +5,5 @@
 /public/useruploads/printimages/*
 /public/useruploads/quotefiles/*
 /node_modules
+.idea
+/.idea

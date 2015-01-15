@@ -11,7 +11,7 @@ namespace Dymantic\Mailers;
 
 class AdminMailer extends BaseMailer {
 
-    protected $to = ['joyner.michael@gmail.com' =>'Michael Joyner'];
+    protected $to = ['joyner.michael@gmail.com' =>'Michael Joyner', 'maxbizley@gmail.com' => 'Max Bizley'];
 
     public function sendNewQuoteNotification($quoteRequest)
     {
