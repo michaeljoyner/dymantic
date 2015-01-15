@@ -24,11 +24,10 @@ abstract class FileValidator {
     public function validate($files)
     {
         $violation_found = false;
-        if(count($files) === 1 && $files[0] === NULL)
+        if($files === NULL || (count($files) === 1 && $files[0] === NULL))
         {
             return true;
         }
-
         if(! is_array($files))
         {
             $files = array($files);
