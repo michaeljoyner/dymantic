@@ -39,7 +39,7 @@
 @section('content')
 	@include('svg.bubbles')
 	<header id="home_header">
-		<img src="{{ asset('images/Logo_complete.png') }}" alt="Dymantic Design logo">
+		<img src="{{ asset('images/rsz_logo_complete.png') }}" alt="Dymantic Design logo">
 	</header>
 	@include('navmenu')
 	<div id="pitch" class="wavy body-section geosans">
