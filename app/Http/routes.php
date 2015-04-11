@@ -1,19 +1,36 @@
 <?php
 
+
+
 /*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+ * Quote Requests
+ */
+Route::post('quickquote', 'QuotesController@storeQuoteRequest');
 
+/*
+ * Ajax Uploads
+ */
+Route::post('qquploads', 'AjaxUploadController@storeQuoteFile');
+Route::post('logoupload', 'AjaxUploadController@storeLogoImageUploads');
+Route::post('printimageupload', 'AjaxUploadController@storePrintImageUpload');
+Route::post('printdocupload', 'AjaxUploadController@storePrintDocUpload');
+
+/*
+ * Brief Requests
+ */
+Route::post('brief', 'BriefsController@storeBrief');
+
+/*
+ * Pages
+ */
 Route::get('/', 'PagesController@showWelcome');
+Route::get('services', 'PagesController@showServicePage');
+Route::get('getstarted', 'PagesController@showGetStartedPage');
+Route::get('quote', 'PagesController@showQuotePage');
+Route::get('contact', 'PagesController@showContactPage');
+Route::post('contact', 'PagesController@postContactMessage');
+Route::get('thanks', 'PagesController@showThankYouPage');
 
-Route::get('home', 'HomeController@index');
 
 /*
 |--------------------------------------------------------------------------

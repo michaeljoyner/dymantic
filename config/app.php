@@ -116,7 +116,6 @@ return [
 		'Dymantic\Providers\AppServiceProvider',
 		'Dymantic\Providers\EventServiceProvider',
 		'Dymantic\Providers\RouteServiceProvider',
-		'Dymantic\Providers\AnnotationsServiceProvider',
 
 		/*
 		 * Laravel Framework Service Providers...
