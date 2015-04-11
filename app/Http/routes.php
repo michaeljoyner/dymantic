@@ -31,19 +31,17 @@ Route::get('contact', 'PagesController@showContactPage');
 Route::post('contact', 'PagesController@postContactMessage');
 Route::get('thanks', 'PagesController@showThankYouPage');
 
-
 /*
-|--------------------------------------------------------------------------
-| Authentication & Password Reset Controllers
-|--------------------------------------------------------------------------
-|
-| These two controllers handle the authentication of the users of your
-| application, as well as the functions necessary for resetting the
-| passwords for your users. You may modify or remove these files.
-|
-*/
+ * Auth
+ */
+Route::get('admin/login', 'Auth\AuthController@showLogin');
+Route::post('admin/login', 'Auth\AuthController@login');
+Route::get('admin/logout', 'Auth\AuthController@logout');
+/*
+ * Admin
+ */
+Route::get('admin', 'Admin\AdminController@home');
+Route::get('admin/users', 'Admin\UsersController@index');
+Route::get('admin/users/create', 'Admin\UsersController@create');
+Route::post('admin/users/create', 'Admin\UsersController@register');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);

@@ -1,0 +1,22 @@
+.login-background {
+  padding-top: 15em;
+  background-image: url('../images/octo.jpg');
+}
+
+.login-background .panel {
+  background-color: transparent;
+  border: none;
+
+  .form-control {
+    height: 64px;
+    line-height: 40px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  label {
+    color: #fff;
+  }
+}

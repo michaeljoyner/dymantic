@@ -1,0 +1,43 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.complete-page-wrapper {
+  width: 100%;
+  min-height: 100vh; }
+
+.login-background {
+  padding-top: 15em;
+  background-image: url('../images/octo.jpg'); }
+
+.login-background .panel {
+  background-color: transparent;
+  border: none; }
+  .login-background .panel .form-control {
+    height: 64px;
+    line-height: 40px; }
+  .login-background .panel a {
+    color: #fff; }
+  .login-background .panel label {
+    color: #fff; }
+
+.admin-home-page {
+  background-image: url('../images/blueocto.jpg');
+  background-size: cover; }
+  .admin-home-page .navbar-inverse {
+    background-color: transparent;
+    border-color: transparent; }
+  .admin-home-page .navbar-inverse .navbar-brand {
+    color: white; }
+  .admin-home-page .navbar-inverse .navbar-brand:hover {
+    color: orangered; }
+  .admin-home-page .navbar-inverse .navbar-nav > li > a {
+    color: white; }
+  .admin-home-page .navbar-inverse .navbar-nav > li > a:hover {
+    color: orangered; }

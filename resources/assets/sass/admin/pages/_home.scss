@@ -1,0 +1,27 @@
+.admin-home-page {
+  background-image: url('../images/blueocto.jpg');
+  background-size: cover;
+
+  .navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .navbar-inverse .navbar-brand {
+    color: white;
+  }
+
+  .navbar-inverse .navbar-brand:hover {
+    color: orangered;
+  }
+
+  .navbar-inverse .navbar-nav>li>a {
+    color: white;
+  }
+
+  .navbar-inverse .navbar-nav>li>a:hover {
+    color: orangered;
+  }
+
+
+}
