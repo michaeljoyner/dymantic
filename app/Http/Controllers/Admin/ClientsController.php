@@ -3,6 +3,7 @@
 use Dymantic\Clients\ClientRepository;
 use Dymantic\Http\Requests;
 use Dymantic\Http\Controllers\Controller;
+use Dymantic\Projects\Project;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -36,5 +37,29 @@ class ClientsController extends Controller
         } else {
             return redirect()->back()->withInput();
         }
+    }
+
+    public function show($slug)
+    {
+        return $this->returnViewWithClientFromSlug($slug, 'admin.clients.show');
+    }
+
+    public function createProject($clientSlug)
+    {
+        return $this->returnViewWithClientFromSlug($clientSlug, 'admin.projects.create');
+    }
+
+    public function storeProject(Request $request)
+    {
+        $project = Project::create($request->all());
+
+        return redirect('admin');
+    }
+
+    private function returnViewWithClientFromSlug($slug, $viewName)
+    {
+        $client = $this->clientRepository->findBySlug($slug);
+
+        return view($viewName)->with(compact('client'));
     }
 }

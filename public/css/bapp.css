@@ -41,3 +41,22 @@ body {
     color: white; }
   .admin-home-page .navbar-inverse .navbar-nav > li > a:hover {
     color: orangered; }
+
+.client-box {
+  width: 18%;
+  min-height: 200px;
+  float: left;
+  margin: 2em; }
+  .client-box .client-image-box {
+    width: 100%;
+    height: 150px;
+    background-color: dodgerblue; }
+    .client-box .client-image-box img {
+      width: 100%;
+      height: 100%; }
+  .client-box .client-name {
+    text-align: left;
+    color: #696969; }
+
+
+/*# sourceMappingURL=bapp.css.map */

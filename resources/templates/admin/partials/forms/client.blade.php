@@ -19,6 +19,24 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="col-md-3">Website</label>
+        <div class="col-md-6">
+            <input type="text" name="website" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3">Industry</label>
+        <div class="col-md-6">
+            <input type="text" name="industry" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3">Operating since:</label>
+        <div class="col-md-3">
+            <input type="text" name="operating_since" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-md-3">Name</label>
         <div class="col-md-6">
             <textarea name="description" class="form-control"></textarea>

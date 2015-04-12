@@ -36,7 +36,7 @@ class ClientTableSeeder extends Seeder {
 
     public function run()
     {
-        DB::table('clients')->truncate();
+        DB::table('clients')->delete();
         TestDummy::times(5)->create('Dymantic\Clients\Client');
     }
 }

@@ -51,4 +51,9 @@ Route::post('admin/users/create', 'Admin\UsersController@register');
 Route::get('admin/clients', 'Admin\ClientsController@index');
 Route::get('admin/clients/create', 'Admin\ClientsController@create');
 Route::post('admin/clients/create', 'Admin\ClientsController@store');
-
+Route::get('admin/clients/show/{slug}', 'Admin\ClientsController@show');
+Route::post('admin/clients/project', 'Admin\ClientsController@storeProject');
+Route::get('admin/clients/{slug}/project/create', 'Admin\ClientsController@createProject');
+Route::post('admin/clients/imageupload', function() {
+   dd(\Illuminate\Support\Facades\Input::all());
+});
