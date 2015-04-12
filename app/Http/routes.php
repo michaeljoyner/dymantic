@@ -45,3 +45,10 @@ Route::get('admin/users', 'Admin\UsersController@index');
 Route::get('admin/users/create', 'Admin\UsersController@create');
 Route::post('admin/users/create', 'Admin\UsersController@register');
 
+/*
+ * Clients
+ */
+Route::get('admin/clients', 'Admin\ClientsController@index');
+Route::get('admin/clients/create', 'Admin\ClientsController@create');
+Route::post('admin/clients/create', 'Admin\ClientsController@store');
+
