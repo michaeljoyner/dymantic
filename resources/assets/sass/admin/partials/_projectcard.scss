@@ -1,0 +1,33 @@
+.project-card {
+  width: 40%;
+  margin: 2em;
+  float: left;
+  border: 1px solid $lightgrey;
+  border-radius: 0;
+  padding: 1em;
+  font-family: $opensans;
+
+  .project-name {
+    color: $primary_orange;
+    font-family: $geosans;
+    text-decoration: underline;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .product-description {
+    color: $darkgrey;
+  }
+  
+  .task-detail {
+    color: $darkgrey;
+
+    .completed-task {
+      color: $primary_blue;
+    }
+    
+    .total-tasks {
+      color: $primary_orange;
+    }
+  }
+}

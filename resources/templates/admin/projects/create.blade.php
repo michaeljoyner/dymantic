@@ -3,7 +3,8 @@
 @section('content')
     @include('admin.partials.navbar')
     <div class="container">
-        <h1>Start Something New...</h1>
-        @include('admin.partials.forms.newproject', $client)
+        <h1 class="content-header">Start Something New...</h1>
+        <hr class="content-divider"/>
+        @include('admin.partials.forms.newproject', ['client' => $client, 'url' => 'admin/clients/project', 'submitText' => 'Create'])
     </div>
 @endsection

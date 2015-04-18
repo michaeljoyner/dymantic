@@ -1,51 +1,58 @@
-<div class="container">
-    {!! Form::open(['url' => 'admin/clients/create', 'class' => 'form-horizontal']) !!}
-    <div class="form-group">
-        <label class="col-md-3">Name</label>
-        <div class="col-md-6">
-            <input type="text" name="name" class="form-control"/>
-        </div>
+<div class="row">
+<div class="col-md-9">
+{!! Form::model($client, ['url' => $url, 'class' => 'form-horizontal dymantic-form', 'id' => 'client-form']) !!}
+<div class="form-group">
+    {!! Form::label('name', 'Name:', ['class' => 'col-md-3']) !!}
+    <div class="col-md-6">
+        {!! Form::text('name', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        <label class="col-md-3">Contact Person</label>
-        <div class="col-md-6">
-            <input type="text" name="contact_person" class="form-control"/>
-        </div>
+</div>
+<div class="form-group">
+    {!! Form::label('contact_person', 'Contact Person:', ['class' => 'col-md-3']) !!}
+    <div class="col-md-6">
+        {!! Form::text('contact_person', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        <label class="col-md-3">Email</label>
-        <div class="col-md-6">
-            <input type="email" name="contact_email" class="form-control"/>
-        </div>
+</div>
+<div class="form-group">
+    {!! Form::label('contact_email', 'Email address:', ['class' => 'col-md-3']) !!}
+    <div class="col-md-6">
+        {!! Form::email('contact_email', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        <label class="col-md-3">Website</label>
-        <div class="col-md-6">
-            <input type="text" name="website" class="form-control"/>
-        </div>
+</div>
+<div class="form-group">
+    {!! Form::label('website', 'Website', ['class' => 'col-md-3']) !!}
+    <div class="col-md-6">
+        {!! Form::text('website', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        <label class="col-md-3">Industry</label>
-        <div class="col-md-6">
-            <input type="text" name="industry" class="form-control"/>
-        </div>
+</div>
+<div class="form-group">
+    {!! Form::label('industry', 'Industry:', ['class' => 'col-md-3']) !!}
+    <div class="col-md-6">
+        {!! Form::text('industry', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        <label class="col-md-3">Operating since:</label>
-        <div class="col-md-3">
-            <input type="text" name="operating_since" class="form-control"/>
-        </div>
+</div>
+<div class="form-group">
+    {!! Form::label('operating_since', 'Operating since:', ['class' => 'col-md-3']) !!}
+    <div class="col-md-3">
+        {!! Form::text('operating_since', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="form-group">
-        <label class="col-md-3">Name</label>
-        <div class="col-md-6">
-            <textarea name="description" class="form-control"></textarea>
-        </div>
+</div>
+<div class="form-group">
+    {!! Form::label('description', 'Description:', ['class' => 'col-md-3']) !!}
+    <div class="col-md-6">
+        {!! Form::textarea('description', null, ['class' => 'form-control tall-textbox']) !!}
     </div>
-    <div class="form-group">
-        <div class="col-md-offset-3 col-md-6">
-            <button type="submit" class="btn btn-success form-control">Add</button>
-        </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-3 col-md-6">
+        <button type="submit" class="btn btn-success form-control submit-button">Add</button>
     </div>
-    {!! Form::close() !!}
+</div>
+{!! Form::close() !!}
+</div>
+<div class="col-md-3">
+    <form action="/admin/clients/imageupload" class="dropzone" id="client-pic-dropzone">
+
+    </form>
+</div>
 </div>

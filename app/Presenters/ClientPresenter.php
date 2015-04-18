@@ -10,5 +10,7 @@ class ClientPresenter extends Presenter
         if(! $this->entity->image_path) {
             return $this->default;
         }
+
+        return $this->entity->image_path;
     }
 }

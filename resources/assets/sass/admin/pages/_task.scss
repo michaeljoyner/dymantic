@@ -1,0 +1,36 @@
+.task-vitals {
+  list-style-type: none;
+  padding: 0;
+  font-family: $opensans;
+  color: $darkgrey;
+
+  &>li {
+    display: inline-block;
+    width: 20%;
+
+    .fa {
+      color: $primary_orange;
+    }
+  }
+}
+
+.task-tab-bar {
+  font-family: $geosans;
+  font-size: 120%;
+  font-weight: 600;
+
+  li.active a, li.active a:focus, li.active a:visited {
+    color: $primary_orange;
+  }
+
+  li a {
+    color: $darkgrey;
+  }
+
+}
+
+.task-tab-content {
+  padding: 2em;
+  font-family: $opensans;
+  color: $darkgrey;
+}

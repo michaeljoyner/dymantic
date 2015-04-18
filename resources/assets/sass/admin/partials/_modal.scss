@@ -1,0 +1,16 @@
+.modal.dymantic-modal {
+
+  .modal-content {
+    border-radius: 0;
+    border: 1px solid $primary_orange;
+  }
+
+  h4 {
+    color: $primary_blue;
+    font-family: $geosans;
+  }
+
+  form {
+    display: inline-block;
+  }
+}

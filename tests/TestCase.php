@@ -28,7 +28,7 @@ class TestCase extends IntegrationTest {
         \Illuminate\Support\Facades\Artisan::call('migrate');
     }
 
-    protected function loginAsAValidUser($userOverrides)
+    protected function loginAsAValidUser($userOverrides = ['email' => 'joe@example.com'])
     {
         TestDummy::create('Dymantic\User', $userOverrides);
         $this->visit('admin/login')

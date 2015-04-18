@@ -18,5 +18,15 @@ $factory('Dymantic\Clients\Client', [
 
 $factory('Dymantic\Projects\Project', [
     'client_id' => 'factory:Dymantic\Clients\Client',
+    'name' => $faker->words(2),
     'description' => $faker->paragraph(8)
+]);
+
+$factory('Dymantic\Projects\Task', [
+    'project_id' => 'factory:Dymantic\Projects\Project',
+    'name' => $faker->words(2),
+    'brief' => $faker->paragraphs(8),
+    'notes' => $faker->paragraphs(3),
+    'deadline' => '31st December 2999',
+    'status' => 'Underway'
 ]);

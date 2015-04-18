@@ -1,4 +1,13 @@
+@import "variables/typography";
+@import "variables/colors";
 @import "admin/partials/base";
+@import "admin/partials/buttons";
+@import "admin/partials/projectcard";
+@import "admin/partials/taskcard";
+@import "admin/partials/forms";
+@import "admin/partials/modal";
 @import "admin/pages/login";
 @import "admin/pages/home";
+@import "admin/pages/project";
 @import "admin/pages/clients";
+@import "admin/pages/task";

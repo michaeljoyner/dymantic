@@ -5,6 +5,9 @@
     <title>Dymantic Admin</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset("css/bapp.css") }}"/>
+    <link rel="stylesheet" href="{{ asset('css/dropzone.css') }}"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
     @section('head')
 
     @show

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Geosans';
+  src: url('../../fonts/GeosansLight.ttf'); }
+
 html {
   margin: 0;
   padding: 0;
@@ -11,6 +15,92 @@ body {
 .complete-page-wrapper {
   width: 100%;
   min-height: 100vh; }
+
+.content-divider {
+  margin: 2em 0;
+  border-color: #F2842E; }
+
+.floating-button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 38px;
+  background-color: #F2842E;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px #D5D5D5;
+  text-align: center;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+  border: none; }
+  .floating-button:focus, .floating-button:active, .floating-button:visited, .floating-button:hover {
+    text-decoration: none;
+    outline: none; }
+  .floating-button:hover {
+    color: #F2842E;
+    background-color: #6FCCE2; }
+
+.floating-button.fb-smalltext {
+  font-size: 19px; }
+
+.project-card {
+  width: 40%;
+  margin: 2em;
+  float: left;
+  border: 1px solid #D5D5D5;
+  border-radius: 0;
+  padding: 1em;
+  font-family: 'Open Sans', Helvetica, Ariel, sans-serif; }
+  .project-card .project-name {
+    color: #F2842E;
+    font-family: 'Geosans', Helvetica, Ariel, sans-serif;
+    text-decoration: underline;
+    margin-top: 0;
+    margin-bottom: 20px; }
+  .project-card .product-description {
+    color: #808184; }
+  .project-card .task-detail {
+    color: #808184; }
+    .project-card .task-detail .completed-task {
+      color: #6FCCE2; }
+    .project-card .task-detail .total-tasks {
+      color: #F2842E; }
+
+.task-card {
+  width: 75%;
+  min-height: 100px;
+  border: 1px solid #D5D5D5;
+  padding: 1em;
+  font-family: 'Open Sans', Helvetica, Ariel, sans-serif; }
+  .task-card .task-name {
+    color: #F2842E;
+    margin: 10px 0 1em 0;
+    text-decoration: underline;
+    font-family: 'Geosans', Helvetica, Ariel, sans-serif; }
+  .task-card .task-deadline, .task-card .task-status {
+    color: #808184; }
+
+.dymantic-form label {
+  color: #6FCCE2;
+  font-family: 'Geosans', Helvetica, Ariel, sans-serif; }
+.dymantic-form input[type=text], .dymantic-form input[type=email], .dymantic-form textarea {
+  border: 1px solid #6FCCE2;
+  border-radius: 0; }
+.dymantic-form .submit-button {
+  background-color: #F2842E; }
+.dymantic-form .tall-textbox {
+  height: 150px; }
+
+.modal.dymantic-modal .modal-content {
+  border-radius: 0;
+  border: 1px solid #F2842E; }
+.modal.dymantic-modal h4 {
+  color: #6FCCE2;
+  font-family: 'Geosans', Helvetica, Ariel, sans-serif; }
+.modal.dymantic-modal form {
+  display: inline-block; }
 
 .login-background {
   padding-top: 15em;
@@ -42,21 +132,109 @@ body {
   .admin-home-page .navbar-inverse .navbar-nav > li > a:hover {
     color: orangered; }
 
+.tasks-container {
+  position: relative; }
+  .tasks-container .floating-button {
+    position: absolute;
+    top: 0;
+    right: 1em; }
+
+.client-container {
+  position: relative; }
+  .client-container .floating-button {
+    position: absolute;
+    top: 0;
+    right: 1em; }
+
+.client-page-header {
+  position: relative;
+  margin-bottom: 50px; }
+  .client-page-header .content-header {
+    float: left; }
+  .client-page-header .floating-button {
+    float: right;
+    margin-top: 20px;
+    margin-right: 1em; }
+
 .client-box {
   width: 18%;
   min-height: 200px;
   float: left;
-  margin: 2em; }
+  margin: 2em;
+  background-color: rgba(0, 0, 0, 0.5); }
   .client-box .client-image-box {
     width: 100%;
-    height: 150px;
-    background-color: dodgerblue; }
+    height: 200px;
+    overflow: hidden;
+    background-color: #FFFFFF; }
     .client-box .client-image-box img {
-      width: 100%;
       height: 100%; }
   .client-box .client-name {
     text-align: left;
-    color: #696969; }
+    color: #FFFFFF;
+    font-family: 'Geosans', Helvetica, Ariel, sans-serif;
+    padding: 0 0.5em; }
+  .client-box .project-detail {
+    color: #F2842E;
+    font-family: 'Open Sans', Helvetica, Ariel, sans-serif;
+    padding: 0 1em; }
 
+form.dropzone .dz-preview:not(:last-child) {
+  display: none; }
 
-/*# sourceMappingURL=bapp.css.map */
+form.dropzone .dz-preview:last-child {
+  display: block; }
+
+h1.content-header {
+  color: #6FCCE2;
+  font-family: 'Geosans', Helvetica, Ariel, sans-serif; }
+
+.client-outline .client-detail {
+  margin: 2em 0;
+  font-family: 'Open Sans', Helvetica, Ariel, sans-serif; }
+  .client-outline .client-detail .fa {
+    color: #F2842E;
+    padding-right: 1em; }
+.client-outline .client-image-box {
+  height: 250px;
+  overflow: hidden;
+  padding: 2em; }
+  .client-outline .client-image-box img {
+    height: 100%; }
+
+.client-blurb, .client-description {
+  font-size: 120%;
+  font-family: 'Open Sans', Helvetica, Ariel, sans-serif;
+  color: #808184; }
+
+.project-container {
+  position: relative; }
+  .project-container .floating-button {
+    position: absolute;
+    top: 0.25em;
+    right: 1em; }
+
+.task-vitals {
+  list-style-type: none;
+  padding: 0;
+  font-family: 'Open Sans', Helvetica, Ariel, sans-serif;
+  color: #808184; }
+  .task-vitals > li {
+    display: inline-block;
+    width: 20%; }
+    .task-vitals > li .fa {
+      color: #F2842E; }
+
+.task-tab-bar {
+  font-family: 'Geosans', Helvetica, Ariel, sans-serif;
+  font-size: 120%;
+  font-weight: 600; }
+  .task-tab-bar li.active a, .task-tab-bar li.active a:focus, .task-tab-bar li.active a:visited {
+    color: #F2842E; }
+  .task-tab-bar li a {
+    color: #808184; }
+
+.task-tab-content {
+  padding: 2em;
+  font-family: 'Open Sans', Helvetica, Ariel, sans-serif;
+  color: #808184; }

@@ -71,9 +71,9 @@ class ClientTest extends TestCase {
         ];
         $client = $this->createNewClient();
         $this->click($client['name'])
-            ->andClick('Project')
-            ->andSubmitForm('Start Project', $projectData)
-            ->andVerifyInDatabase('projects', $projectData);
+             ->andClick('Project')
+             ->andSubmitForm('Start Project', $projectData)
+             ->andVerifyInDatabase('projects', $projectData);
     }
 
     /**
@@ -84,13 +84,27 @@ class ClientTest extends TestCase {
         $clientName = 'Isomark';
         $client = TestDummy::create('Dymantic\Clients\Client', ['name' => $clientName]);
         $project1 = TestDummy::create('Dymantic\Projects\Project', ['client_id' => $client->id]);
-        $project2 = TestDummy::create('Dymantic\Projects\Project', ['client_id'=> $client->id]);
+        $project2 = TestDummy::create('Dymantic\Projects\Project', ['client_id' => $client->id]);
 
         $this->loginAsAValidUser(['email' => 'joe@example.com']);
         $this->click('Clients')
-            ->andClick($clientName)
-            ->andSee($project1->description)
-            ->andSee($project2->description);
+             ->andClick($clientName)
+             ->andSee($project1->description)
+             ->andSee($project2->description);
+    }
+
+    /**
+     * @test
+     */
+    public function itCanViewAProject()
+    {
+        $client = TestDummy::create('Dymantic\Clients\Client');
+        $project = TestDummy::create('Dymantic\Projects\Project', ['client_id' => $client->id]);
+        $this->loginAsAValidUser(['email' => 'joe@example.com']);
+        $this->visit('admin/clients/show/' . $client->slug)
+             ->andClick($project->name)
+             ->andSeePageIs('admin/projects/' . $project->id)
+             ->andSee($project->name);
     }
 
     protected function createNewClient()

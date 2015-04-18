@@ -54,6 +54,19 @@ Route::post('admin/clients/create', 'Admin\ClientsController@store');
 Route::get('admin/clients/show/{slug}', 'Admin\ClientsController@show');
 Route::post('admin/clients/project', 'Admin\ClientsController@storeProject');
 Route::get('admin/clients/{slug}/project/create', 'Admin\ClientsController@createProject');
-Route::post('admin/clients/imageupload', function() {
-   dd(\Illuminate\Support\Facades\Input::all());
-});
+Route::post('admin/clients/imageupload', 'Admin\ClientsController@storeImage');
+Route::post('admin/clients/edit/{slug}', 'Admin\ClientsController@update');
+Route::get('admin/clients/edit/{slug}', 'Admin\ClientsController@edit');
+Route::delete('admin/clients/{id}', 'Admin\ClientsController@delete');
+Route::get('admin/clients/{clientSlug}/project/edit/{id}', 'Admin\ClientsController@editProject');
+Route::post('admin/projects/edit/{id}', 'Admin\ProjectsController@update');
+
+/*
+ * Projects and Tasks
+ */
+Route::post('admin/projects/task', 'Admin\ProjectsController@storeTask');
+Route::get('admin/projects/{id}/task/create', 'Admin\ProjectsController@createTask');
+Route::get('admin/projects/{id}', 'Admin\ProjectsController@show');
+Route::get('admin/projects/task/{id}', 'Admin\ProjectsController@showTask');
+Route::delete('admin/projects/{id}', 'Admin\ProjectsController@delete');
+Route::post('admin/tasks/{id}/status', 'Admin\TasksController@setStatus');

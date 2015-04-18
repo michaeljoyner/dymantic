@@ -1,0 +1,19 @@
+.dymantic-form {
+  label {
+    color: $primary_blue;
+    font-family: $geosans;
+  }
+
+  input[type=text], input[type=email], textarea {
+    border: 1px solid $primary_blue;
+    border-radius: 0;
+  }
+
+  .submit-button {
+    background-color: $primary_orange;
+  }
+
+  .tall-textbox {
+    height: 150px;
+  }
+}

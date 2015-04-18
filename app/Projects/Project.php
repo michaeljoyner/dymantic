@@ -8,11 +8,22 @@ class Project extends Model
 
     protected $fillable = [
         'description',
+        'name',
         'client_id'
     ];
 
     public function client()
     {
         return $this->belongsTo('Dymantic\Clients\Client');
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany('Dymantic\Projects\Task');
+    }
+
+    public function getNumberOfCompleteTasks()
+    {
+        return $this->tasks()->where('task_complete', true)->get()->count();
     }
 }
