@@ -70,3 +70,9 @@ Route::get('admin/projects/{id}', 'Admin\ProjectsController@show');
 Route::get('admin/projects/task/{id}', 'Admin\ProjectsController@showTask');
 Route::delete('admin/projects/{id}', 'Admin\ProjectsController@delete');
 Route::post('admin/tasks/{id}/status', 'Admin\TasksController@setStatus');
+
+/*
+ * Admin Briefs
+ */
+Route::get('admin/briefs', 'Admin\BriefsController@index');
+Route::get('admin/briefs/{id}', 'Admin\BriefsController@show');

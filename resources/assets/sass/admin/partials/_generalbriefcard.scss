@@ -1,0 +1,23 @@
+.brief-box {
+  width: 80%;
+  margin: 1em auto;
+  border: 1px solid $lightgrey;
+  padding: 1em;
+  color: $darkgrey;
+  font-family: $opensans;
+
+  .company-name {
+    color: $primary_blue;
+    font-family: $geosans;
+    margin-top: 0;
+  }
+
+  .sub-brief-type:not(:first-of-type):before {
+    content: ' & ';
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

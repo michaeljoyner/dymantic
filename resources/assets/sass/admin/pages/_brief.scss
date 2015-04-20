@@ -1,0 +1,19 @@
+.task-vitals.brief-vitals {
+  &>li {
+    width: 23%;
+  }
+}
+
+.brief-client-outline {
+  font-family: $opensans;
+  color: $darkgrey;
+  padding: 10px;
+  h3 {
+    color: $primary_blue;
+    font-family: $geosans;
+  }
+}
+
+#subBriefTabs {
+  margin-top: 50px;
+}

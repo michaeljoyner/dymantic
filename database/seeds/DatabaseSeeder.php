@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder {
 
         $this->call('UserTableSeeder');
         $this->call('ClientTableSeeder');
+        $this->call('BriefsSeeder');
+
     }
 
 }
@@ -38,5 +40,27 @@ class ClientTableSeeder extends Seeder {
     {
         DB::table('clients')->delete();
         TestDummy::times(5)->create('Dymantic\Clients\Client');
+    }
+}
+
+class BriefsSeeder extends Seeder {
+    public function run()
+    {
+        DB::table('generalbriefs')->delete();
+        DB::table('logobriefs')->delete();
+        DB::table('sitebriefs')->delete();
+        DB::table('printbriefs')->delete();
+
+        $generalBrief = TestDummy::create('Dymantic\Briefs\PrintBriefs\PrintBrief');
+
+
+        TestDummy::create('Dymantic\Briefs\PrintBriefs\PrintBrief', ['generalbrief_id' => $generalBrief->id]);
+        TestDummy::create('Dymantic\Briefs\Site\SiteBrief', ['generalbrief_id' => $generalBrief->id]);
+        TestDummy::create('Dymantic\Briefs\Logo\LogoBrief', ['generalbrief_id' => $generalBrief->id]);
+
+        TestDummy::create('Dymantic\Briefs\PrintBriefs\PrintBrief');
+        TestDummy::create('Dymantic\Briefs\Site\SiteBrief');
+        TestDummy::create('Dymantic\Briefs\Logo\LogoBrief');
+
     }
 }

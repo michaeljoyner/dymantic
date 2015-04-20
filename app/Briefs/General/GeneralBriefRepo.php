@@ -38,4 +38,14 @@ class GeneralBriefRepo {
 
         return $generalBrief;
     }
+
+    public function all()
+    {
+        return $this->model->with('printBriefs', 'logoBriefs', 'siteBriefs')->latest()->get();
+    }
+
+    public function findById($id)
+    {
+        return $this->model->with('printBriefs', 'logoBriefs', 'siteBriefs')->findOrFail($id);
+    }
 }

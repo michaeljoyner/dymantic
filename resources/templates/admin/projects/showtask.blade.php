@@ -13,23 +13,34 @@
         </header>
         <ul class="task-vitals">
             <li>
-                <span class="fa fa-check-square"></span><span> <strong>Status: </strong><span id="task-status">{{ $task->status }}</span> </span>
+                <span id="status-icon" class="fa fa-check-square"></span><span> <strong>Status: </strong><span id="task-status">{{ $task->status }}</span> </span>
                 <div class="btn-group">
                     <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#" class="task-status-button" data-status="underway">Underway</a></li>
-                        <li><a href="#" class="task-status-button" data-status="ongoing">Ongoing</a></li>
-                        <li><a href="#" class="task-status-button" data-status="waiting">Waiting on client</a></li>
-                        <li><a href="#" class="task-status-button" data-status="almostdone">Almost done</a></li>
-                        <li><a href="#" class="task-status-button" data-status="aborted">Aborted</a></li>
-                        <li><a href="#" class="task-status-button" data-status="complete">Complete</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-rocket" data-status="underway">Underway</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-cog" data-status="ongoing">Ongoing</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-spinner" data-status="waiting">Waiting on client</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-smile-o" data-status="almost done">Almost done</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-thumbs-down" data-status="aborted">Aborted</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-check-circle" data-status="complete">Complete</a></li>
                     </ul>
                 </div>
             </li>
             <li>
                 <span class="fa fa-clock-o"></span><span> <strong>Deadline: </strong> {{ $task->deadline }}</span>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li>
+                            <input type="date" class="form-control"/>
+                        </li>
+
+                    </ul>
+                </div>
             </li>
         </ul>
         <hr class="content-divider"/>
@@ -58,6 +69,7 @@
 
         var taskStatusManager = {
             status: null,
+            icon: 'fa fa-check',
 
             init: function() {
                 var buttons = document.querySelectorAll('.task-status-button');
@@ -65,18 +77,20 @@
 
                 for(i;i<l;i++) {
                     buttons[i].addEventListener('click', function(ev) {
-                        taskStatusManager.setStatus(ev.target.getAttribute('data-status'));
+                        taskStatusManager.setStatus(ev.target.getAttribute('data-status'), ev.target.getAttribute('data-icon'));
                     }, false);
                 }
             },
 
-            setStatus: function(status) {
+            setStatus: function(status, icon) {
                 taskStatusManager.status = status;
+                taskStatusManager.icon = icon;
                 taskStatusManager.sendStatus();
             },
 
             showStatus: function() {
                 var statusText = document.querySelector('#task-status').innerHTML = taskStatusManager.status;
+                document.querySelector('#status-icon').className = taskStatusManager.icon;
             },
 
             sendStatus: function() {
