@@ -76,3 +76,4 @@ Route::post('admin/tasks/{id}/status', 'Admin\TasksController@setStatus');
  */
 Route::get('admin/briefs', 'Admin\BriefsController@index');
 Route::get('admin/briefs/{id}', 'Admin\BriefsController@show');
+Route::get('admin/briefs/{id}/convertnew', 'Admin\BriefsController@convertNew');

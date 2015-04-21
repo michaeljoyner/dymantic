@@ -9,9 +9,15 @@
 namespace Dymantic\Briefs\PrintBriefs;
 
 
+use Dymantic\Presenters\Contracts\PresenterInterface;
+use Dymantic\Presenters\PresentableTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class PrintBrief extends Model {
+class PrintBrief extends Model implements PresenterInterface {
+
+    use PresentableTrait;
+
+    protected $presenter = 'Dymantic\Presenters\PrintBriefPresenter';
 
     protected $table = 'printbriefs';
 

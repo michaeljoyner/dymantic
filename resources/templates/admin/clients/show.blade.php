@@ -20,7 +20,7 @@
 
         </div>
         <p class="client-blurb">{{ $client->name }} has been operating in the {{ $client->industry }} industry since {{ $client->operating_since }}</p>
-        <p class="client-description">{{ $client->description }}</p>
+        <p class="client-description">{!! $client->description !!}</p>
         <hr class="content-divider"/>
         <div class="project-container">
             <h1 class="content-header">Projects</h1>

@@ -50,4 +50,9 @@ class GeneralBrief extends Model implements PresenterInterface {
         return $this->hasMany('Dymantic\Briefs\PrintBriefs\PrintBrief', 'generalbrief_id');
     }
 
+    public function converted()
+    {
+        return $this->hasOne('Dymantic\Briefs\General\ConvertedBrief', 'generalbrief_id');
+    }
+
 }

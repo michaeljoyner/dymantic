@@ -20,18 +20,19 @@ class GeneralBriefRepo {
     {
         $this->model = $model;
     }
+
     public function store($command)
     {
         $generalBrief = $this->model->create([
-            'contact_person' => $command->contact_person,
-            'email' => $command->email,
-            'company' => $command->company,
-            'industry' => $command->industry,
-            'since' => $command->since,
+            'contact_person'  => $command->contact_person,
+            'email'           => $command->email,
+            'company'         => $command->company,
+            'industry'        => $command->industry,
+            'since'           => $command->since,
             'current_website' => $command->current_website,
-            'background' => $command->background,
-            'reaction' => $command->reaction,
-            'nutshell' => $command->nutshell
+            'background'      => $command->background,
+            'reaction'        => $command->reaction,
+            'nutshell'        => $command->nutshell
         ]);
 
         $generalBrief->raise(new GeneralBriefWasSubmitted($generalBrief));
@@ -41,11 +42,16 @@ class GeneralBriefRepo {
 
     public function all()
     {
-        return $this->model->with('printBriefs', 'logoBriefs', 'siteBriefs')->latest()->get();
+        return $this->model->with('printBriefs.printDocs', 'logoBriefs.logoFiles', 'siteBriefs')->latest()->get();
     }
 
     public function findById($id)
     {
-        return $this->model->with('printBriefs', 'logoBriefs', 'siteBriefs')->findOrFail($id);
+        return $this->model->with('logoBriefs.logoFiles', 'siteBriefs', 'converted')
+                           ->with(['printBriefs' => function ($query)
+                           {
+                               $query->with('printDocs', 'printImages');
+                           }
+                           ])->findOrFail($id);
     }
 }

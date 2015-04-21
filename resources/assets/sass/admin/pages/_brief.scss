@@ -17,3 +17,19 @@
 #subBriefTabs {
   margin-top: 50px;
 }
+
+.client-brief-box {
+  .question {
+    color: $primary_blue;
+
+    &:before {
+      content: '\00bb';
+      padding-right: 10px;
+    }
+  }
+
+  .answer {
+    padding-left: 30px;
+    max-width: 600px;
+  }
+}

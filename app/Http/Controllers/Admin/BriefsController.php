@@ -3,6 +3,7 @@
 use Dymantic\Briefs\General\GeneralBriefRepo;
 use Dymantic\Http\Requests;
 use Dymantic\Http\Controllers\Controller;
+use Dymantic\Services\BriefToClientConverter;
 use Illuminate\Http\Request;
 
 class BriefsController extends Controller
@@ -31,5 +32,13 @@ class BriefsController extends Controller
         $generalBrief = $this->generalBriefRepo->findById($id);
 
         return view('admin.briefs.show')->with(compact('generalBrief'));
+    }
+
+    public function convertNew($id, BriefToClientConverter $converter)
+    {
+        $generalBrief = $this->generalBriefRepo->findById($id);
+        $converter->convertToNewClient($generalBrief);
+
+        return redirect('admin/clients');
     }
 }

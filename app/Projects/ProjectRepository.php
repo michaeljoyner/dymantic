@@ -27,6 +27,11 @@ class ProjectRepository
         return $project->delete();
     }
 
+    public function store(array $data)
+    {
+        return $this->model->create($data);
+    }
+
     public function update($id, $data)
     {
         $project = $this->model->findOrFail($id);

@@ -9,9 +9,13 @@
 namespace Dymantic\Briefs\Site;
 
 
+use Dymantic\Presenters\Contracts\PresenterInterface;
+use Dymantic\Presenters\PresentableTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class SiteBrief extends Model {
+class SiteBrief extends Model implements PresenterInterface {
+
+    use PresentableTrait;
 
     protected $table = 'sitebriefs';
 
@@ -30,5 +34,7 @@ class SiteBrief extends Model {
         'site_direction',
         'sitetarget'
     ];
+
+    protected $presenter = 'Dymantic\Presenters\SiteBriefPresenter';
 
 }

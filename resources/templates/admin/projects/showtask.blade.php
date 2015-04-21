@@ -13,18 +13,18 @@
         </header>
         <ul class="task-vitals">
             <li>
-                <span id="status-icon" class="fa fa-check-square"></span><span> <strong>Status: </strong><span id="task-status">{{ $task->status }}</span> </span>
+                {!! $task->present()->statusWithIcon() !!}
                 <div class="btn-group">
                     <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#" class="task-status-button" data-icon="fa fa-rocket" data-status="underway">Underway</a></li>
-                        <li><a href="#" class="task-status-button" data-icon="fa fa-cog" data-status="ongoing">Ongoing</a></li>
-                        <li><a href="#" class="task-status-button" data-icon="fa fa-spinner" data-status="waiting">Waiting on client</a></li>
-                        <li><a href="#" class="task-status-button" data-icon="fa fa-smile-o" data-status="almost done">Almost done</a></li>
-                        <li><a href="#" class="task-status-button" data-icon="fa fa-thumbs-down" data-status="aborted">Aborted</a></li>
-                        <li><a href="#" class="task-status-button" data-icon="fa fa-check-circle" data-status="complete">Complete</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-rocket" data-status="Underway">Underway</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-cog" data-status="Ongoing">Ongoing</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-spinner" data-status="Waiting on client">Waiting on client</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-smile-o" data-status="Almost done">Almost done</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-thumbs-down" data-status="Aborted">Aborted</a></li>
+                        <li><a href="#" class="task-status-button" data-icon="fa fa-check-circle" data-status="Complete">Complete</a></li>
                     </ul>
                 </div>
             </li>
@@ -52,9 +52,19 @@
         </ul>
 
         <div class="tab-content task-tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="brief">{{ $task->brief }}</div>
-            <div role="tabpanel" class="tab-pane fade" id="notes">{{ $task->notes }}</div>
-            <div role="tabpanel" class="tab-pane fade" id="messages">Files will be managed here</div>
+            <div role="tabpanel" class="tab-pane fade in active" id="brief">
+                <div class="client-brief-box">
+                    {!! $task->brief !!}
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="notes">
+                {{ $task->notes }}
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="messages">
+                @foreach($task->taskFiles as $file)
+                    {!! $file->present()->fileAsHtmlView() !!}
+                @endforeach
+            </div>
             <div role="tabpanel" class="tab-pane fade" id="settings">Simple todo app will be here</div>
         </div>
     </div>

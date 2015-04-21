@@ -9,9 +9,15 @@
 namespace Dymantic\Briefs\Logo;
 
 
+use Dymantic\Presenters\Contracts\PresenterInterface;
+use Dymantic\Presenters\PresentableTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class LogoBrief extends Model {
+class LogoBrief extends Model implements PresenterInterface {
+
+    use PresentableTrait;
+
+    protected $presenter = 'Dymantic\Presenters\LogoBriefPresenter';
 
     protected $table = 'logobriefs';
 
